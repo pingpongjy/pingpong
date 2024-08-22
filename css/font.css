@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+
+
+/* nexon */
+@font-face {
+    font-family: 'NEXONGothicLow';
+    src: url(../font/NEXONGothicLow-Bold.otf) format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXONGothicLow';
+    src: url(../font/NEXONGothicLow-Medium.otf) format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXONGothicLow';
+    src: url(../font/NEXONGothicLow-Light.otf) format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}

@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+
+
+
+
+
+
+body {font-family: "NEXONGothicLow"; font-size: 1.6rem; line-height: 1.5; color: #153559;}
+#wrap {position: relative; overflow: hidden; min-width: 320px;}
+
+
+/* 기준해상도 영역잡기 */
+.inner { max-width: calc(100% - 500px); margin: 0 auto; }
+
+
+@media (max-width:1400px) {
+    .inner { max-width: calc(100% - 140px); }
+}
+
+@media (max-width:1200px) {
+    .inner { max-width: calc(100% - 120px); }
+}
+
+@media (max-width:1024px) {
+    .inner { max-width: calc(100% - 100px); }
+}
+
+@media (max-width:768px) {
+    .inner { max-width: calc(100% - 40px); }
+}
+
+
+
+/* all_menu */
+.all_menu { width:100%; height:100%; background:url(../image/sitemap.jpg) no-repeat center; background-size: cover; position:fixed; left:0; top:0; z-index:9999999; }
+.all_menu h1 { font-size:6rem; font-weight:700; text-transform:uppercase; color:#153559;  padding:100px 10% 50px; letter-spacing: -3px; }
+.all_menu .all_gnb { display: flex; width: 80%; height: 50vh; margin:0 auto; }
+.all_menu .all_gnb > li { padding: 10px 30px; width: calc(100%/5); border-left: 1px solid rgba(255, 255, 255, 0.3); }
+.all_menu .all_gnb > li > a { display:block; font-size:3rem; color:#FFF; font-weight: 700; text-transform: uppercase; }
+.all_menu .all_depth2 { padding: 50px 0 0; }
+.all_menu .all_depth2 li a { display:block; padding:5px 0; color:rgba(255,255,255,0.3); transition:color 0.5s; font-size: 2rem; }
+.all_menu .all_depth2 li a:hover { color:#153559; font-weight: 700; }
+.all_menu .all_close { cursor: pointer; position:absolute; right:0; top:0; }
+
+
+
+
+
+
+/* header */
+#header {position:  absolute; left: 0; top: 0; width: 100%; z-index: 99; transition: background 0.5s;  }  
+#header .sns {z-index: 99999; position: fixed;  right: 2.9vw; top: 2.9vh;} 
+#header .sns img {display: block;}
+
+#header .inner {padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+#header .inner h1 img {display: block;}
+
+
+#header .gnb { display: flex; gap: 30px;}
+#header .gnb > li { position: relative; }
+#header .gnb > li > a {display: block; padding: 0 20px; color: #153559; font-size: 2.5rem; font-weight: 900;}
+
+#header .gnb .depth2 { display: flex; align-items: center; background: #153559; 
+    position: absolute;  top:60px; left: -50%;  z-index: 99; }
+  
+#header .gnb > li:nth-child(2) .depth2 { left: -5%; }
+#header .gnb > li:nth-child(3) .depth2 { left: -160%; }
+#header .gnb > li:nth-child(4) .depth2 { left: -45%; }
+#header .gnb .depth2 li a {text-align: center;  display: block; padding: 10px 20px; width: 150px; background: #153559; color:#ECE7D8; transition:color 0.5s; }
+
+#header .gnb .depth2 li a:hover { color:#153559; background: #ECE7D8; font-weight:700 ;}
+
+#header .util { /* display: flex; align-items: center; gap: 30px;  */}
+#header .util .menu { position: relative; width: 35px; height: 26px; cursor: pointer; font-size: 0; }
+#header .util .menu::before { content: ''; width: 100%; height: 2px; background: #153559; position: absolute; right: 0; top: 7px; }
+#header .util .menu::after { content: ''; width: 80%; height: 2px; background: #153559; position: absolute; right: 0; bottom: 7px; }
+/* #header:hover .util .menu::before,#header:hover .util .menu::after { background: #000; }
+ */
+
+
+
+
+
+
+ @media (max-width:1024px) {
+    #header { padding: 10px 0; }
+    #header h1 img { width: 80%; }
+    #header .gnb { display: none; }
+    #header .util .sitemap { display: none; }
+    /* #header .util .ham { display: block; } */
+    #header .sns img {display: none;}
+}
+
+
+
+
+
+
+
+ /* footer */
+#footer {background:#605757; font-family: var(--main-font); font-weight: 300;}
+#footer .inner {opacity: 0.5; padding: 100px ; color:#FFF; display: flex; align-items: center; gap: 0.5vw; justify-content: space-between; }
+#footer .footer_logo img {display: block;}
+
+#footer .footer_txt .copy {padding: 1vh 0;}
+#footer .call span {font-weight: 700; font-size: 3rem;}
+
+
+@media (max-width:1024px) {
+    #footer .footer_txt {display: none;}
+    #footer .call {width: 80%;}
+}
+
+@media (max-width:768px) {
+    #footer .call {display: none;}
+}
